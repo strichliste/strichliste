@@ -6,7 +6,6 @@ script:
 - tar xfz strichliste-web-frontend.tar.gz --strip 1 -C strichliste/public/
 - cd strichliste/
 - tar cfz strichliste.tar.gz .env *
-- mv strichliste.tar.gz ../
 deploy:
   provider: releases
   api_key:
