@@ -1,11 +1,11 @@
 script:
 - mkdir strichliste
 - wget https://github.com/strichliste/strichliste-backend/releases/download/v1.4.0/strichliste-backend.tar.gz
-- tar xvfz strichliste-backend.tar.gz -C strichliste/
+- tar xfz strichliste-backend.tar.gz -C strichliste/
 - wget https://github.com/strichliste/strichliste-web-frontend/releases/download/v1.3.1/strichliste-web-frontend.tar.gz
-- tar xvfz strichliste-web-frontend.tar.gz --strip 1 -C strichliste/public/
+- tar xfz strichliste-web-frontend.tar.gz --strip 1 -C strichliste/public/
 - cd strichliste/
-- tar cvfz strichliste.tar.gz .env *
+- tar cfz strichliste.tar.gz .env *
 - mv strichliste.tar.gz ../
 deploy:
   provider: releases
