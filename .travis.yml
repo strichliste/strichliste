@@ -5,7 +5,7 @@ script:
 - wget https://github.com/strichliste/strichliste-web-frontend/releases/download/v1.3.1/strichliste-web-frontend.tar.gz
 - tar xvfz strichliste-web-frontend.tar.gz --strip 1 -C strichliste/public/
 - cd strichliste/
-- tar cvfz strichliste.tar.gz .* *
+- tar cvfz strichliste.tar.gz .env *
 - mv strichliste.tar.gz ../
 deploy:
   provider: releases
