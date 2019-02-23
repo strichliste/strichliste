@@ -8,10 +8,15 @@ Whatever you do: Don't use sqlite. This might lead to inconsistencies in your da
 
 # Changelog 
 
+## v1.5.0
+
+- Refactored frontend to use react hooks
+- Add zoom button to adjust frontend size
+
 ## v1.4.1
 
-Added Prototype PayPal Feature
+- Added Prototype PayPal Feature
 
 ## v1.4.0
 
-New static build infrastructure
+- New static build infrastructure
