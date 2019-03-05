@@ -8,6 +8,12 @@ Whatever you do: Don't use sqlite. This might lead to inconsistencies in your da
 
 # Changelog 
 
+## v1.5.1
+
+- Fix contrast/colors
+- Add zoom icons on front page
+- Add link to other users
+
 ## v1.5.0
 
 - Refactored frontend to use react hooks
