@@ -2,7 +2,7 @@ script:
 - mkdir strichliste
 - wget https://github.com/strichliste/strichliste-backend/releases/download/v1.4.1/strichliste-backend.tar.gz
 - tar xfz strichliste-backend.tar.gz -C strichliste
-- wget https://github.com/strichliste/strichliste-web-frontend/releases/download/v1.5.3/strichliste-web-frontend.tar.gz
+- wget https://github.com/strichliste/strichliste-web-frontend/releases/download/v1.5.4/strichliste-web-frontend.tar.gz
 - tar xfz strichliste-web-frontend.tar.gz --strip 1 -C strichliste/public/
 - cd strichliste/
 - tar cfz strichliste.tar.gz .env *
