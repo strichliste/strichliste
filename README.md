@@ -17,6 +17,10 @@ Whatever you do: Don't use sqlite. This might lead to inconsistencies in your da
 - Add API docs
 - Add more validation
 
+## v1.5.2
+
+- Style/Optical fixed
+
 ## v1.5.1
 
 - Fix contrast/colors
