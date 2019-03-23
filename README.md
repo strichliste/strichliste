@@ -8,6 +8,10 @@ Whatever you do: Don't use sqlite. This might lead to inconsistencies in your da
 
 # Changelog 
 
+## v1.6.1
+
+- Fix idleTimeout
+
 ## v1.6.0
 
 - Fix more contrast and color
