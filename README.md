@@ -8,6 +8,15 @@ Whatever you do: Don't use sqlite. This might lead to inconsistencies in your da
 
 # Changelog 
 
+## v1.6.2
+
+Backend:
+- Fix wrong config value
+
+Frontend:
+- Add scroll-to-top for some routes
+- Updated dependencies
+
 ## v1.6.1
 
 - Fix idleTimeout
