@@ -8,6 +8,14 @@ Whatever you do: Don't use sqlite. This might lead to inconsistencies in your da
 
 # Changelog 
 
+## v1.7.0
+
+- Introduce article.autoOpen option
+- Add metrics
+- Improved search field
+- Fix paypal / add redirect parameter
+- A lot of backend cleanups and improvements for metrics
+
 ## v1.6.2
 
 - Fix idleTimeout, again
