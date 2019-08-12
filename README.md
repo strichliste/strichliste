@@ -20,6 +20,13 @@ Whatever you do: Don't use sqlite. This might lead to inconsistencies in your da
 
 - Fix idleTimeout, again
 
+Backend:
+- Fix wrong config value
+
+Frontend:
+- Add scroll-to-top for some routes
+- Updated dependencies
+
 ## v1.6.1
 
 - Fix idleTimeout
