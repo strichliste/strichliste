@@ -8,6 +8,12 @@ Whatever you do: Don't use sqlite. This might lead to inconsistencies in your da
 
 # Changelog 
 
+## v1.7.1
+
+- Fixed user editing
+- Prevent idle timer to be triggered on home
+- Updated dependencies
+
 ## v1.7.0
 
 - Introduce article.autoOpen option
