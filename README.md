@@ -8,6 +8,11 @@ Whatever you do: Don't use sqlite. This might lead to inconsistencies in your da
 
 # Changelog 
 
+## v1.8.0
+
+- Backend php 8.1 compatible
+- Updated symfony framework to 5.4
+
 ## v1.7.1
 
 - Fixed user editing
