@@ -1,6 +1,6 @@
 script:
 - mkdir strichliste
-- wget https://github.com/strichliste/strichliste-backend/releases/download/v1.8.0/strichliste-backend.tar.gz
+- wget https://github.com/strichliste/strichliste-backend/releases/download/v1.8.0/strichliste-backend-v1.8.0.tar.gz -O strichliste-backend.tar.gz
 - tar xfz strichliste-backend.tar.gz -C strichliste
 - wget https://github.com/strichliste/strichliste-web-frontend/releases/download/v1.7.1/strichliste-web-frontend.tar.gz
 - tar xfz strichliste-web-frontend.tar.gz --strip 1 -C strichliste/public/
