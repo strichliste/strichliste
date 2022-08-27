@@ -8,6 +8,10 @@ Whatever you do: Don't use sqlite. This might lead to inconsistencies in your da
 
 # Changelog 
 
+## v1.8.2
+
+- New release with 1.8.0 backend, 1.7.1 frontend
+
 ## v1.8.0
 
 - Backend php 8.1 compatible
