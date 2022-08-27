@@ -31,8 +31,8 @@ jobs:
       - name: Package
         run: |
           mkdir strichliste
-          wget --no-verbose -O strichliste-backend.tar.gz -- $(curl -s https://api.github.com/repos/strichliste/strichliste-backend/releases/latest | jq --raw-output '.assets[0] | .browser_download_url')
-          wget --no-verbose -O strichliste-web-frontend.tar.gz -- $(curl -s https://api.github.com/repos/strichliste/strichliste-web-frontend/releases/latest | jq --raw-output '.assets[0] | .browser_download_url')
+          wget https://github.com/strichliste/strichliste-backend/releases/download/v1.8.0/strichliste-backend-v1.8.0.tar.gz -O strichliste-backend.tar.gz
+          wget https://github.com/strichliste/strichliste-web-frontend/releases/download/v1.7.1/strichliste-web-frontend.tar.gz -O strichliste-web-frontend.tar.gz
           tar xfz strichliste-backend.tar.gz -C strichliste
           tar xfz strichliste-web-frontend.tar.gz --strip 1 -C strichliste/public/
           cd strichliste/
