@@ -1,0 +1,60 @@
+name: CI
+
+defaults:
+  run:
+    working-directory: build
+
+on:
+  push:
+    tags:
+      - "v*" # Push events to matching v*, i.e. v1.0, v20.15.10
+
+jobs:
+  create-releae:
+    runs-on: ubuntu-latest
+
+    steps:
+      # We need to check out the repository in order to get the tag name
+      # in the next step. (The files in this repository are not needed.)
+      - name: Check out repository code
+        uses: actions/checkout@v3
+        with:
+          path: build
+
+      - name: Branch Name
+        id: branch_name
+        run: |
+          echo ::set-output name=SOURCE_NAME::${GITHUB_REF#refs/*/}
+          echo ::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}
+          echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
+
+      - name: Package
+        run: |
+          mkdir strichliste
+          wget https://github.com/strichliste/strichliste-backend/releases/download/v1.8.0/strichliste-backend-v1.8.0.tar.gz -O strichliste-backend.tar.gz
+          wget https://github.com/strichliste/strichliste-web-frontend/releases/download/v1.7.1/strichliste-web-frontend.tar.gz -O strichliste-web-frontend.tar.gz
+          tar xfz strichliste-backend.tar.gz -C strichliste
+          tar xfz strichliste-web-frontend.tar.gz --strip 1 -C strichliste/public/
+          cd strichliste/
+          tar cfz strichliste.tar.gz .env *
+
+      - name: Create Release
+        uses: actions/create-release@v1
+        id: create_release
+        with:
+          draft: true
+          prerelease: false
+          release_name: Release ${{ steps.branch_name.outputs.SOURCE_TAG }}
+          tag_name: ${{ steps.branch_name.outputs.SOURCE_TAG }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Upload Artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: build/strichliste/strichliste.tar.gz
+          asset_name: strichliste-${{ steps.branch_name.outputs.SOURCE_TAG }}.tar.gz
+          asset_content_type: application/gzip
