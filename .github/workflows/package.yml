@@ -35,8 +35,8 @@ jobs:
           mkdir strichliste
           
           # Dynamically downloading the backend and frontend artifacts based on the pushed tag
-          wget https://github.com/strichliste/strichliste-backend/releases/download/v2.0.1/strichliste-backend-v2.0.1.tar.gz -O strichliste-backend.tar.gz
-          wget https://github.com/strichliste/strichliste-web-frontend/releases/download/v2.0.0/strichliste-web-frontend.tar.gz -O strichliste-web-frontend.tar.gz
+          wget https://github.com/strichliste/strichliste-backend/releases/download/v2.1.0/strichliste-backend-v2.1.0.tar.gz -O strichliste-backend.tar.gz
+          wget https://github.com/strichliste/strichliste-web-frontend/releases/download/v2.1.0/strichliste-web-frontend.tar.gz -O strichliste-web-frontend.tar.gz
           
           tar xfz strichliste-backend.tar.gz -C strichliste
           tar xfz strichliste-web-frontend.tar.gz --strip 1 -C strichliste/public/
